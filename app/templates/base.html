@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Leo presto query</title>
+  </head>
+  <body>
+    <h1>welcome ! </h1>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>
